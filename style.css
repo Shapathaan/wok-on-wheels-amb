@@ -1,0 +1,337 @@
+:root {
+  --bg: #101010;
+  --bg-alt: #1d1d1d;
+  --yellow: #ffc928;
+  --red: #e53935;
+  --text: #f5f5f5;
+  --muted: #aaaaaa;
+  --shadow: 0 12px 35px rgba(0, 0, 0, 0.6);
+  --radius: 12px;
+  --transition: 0.25s ease;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.86);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #181818;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 360px;
+  width: 90%;
+  text-align: center;
+}
+
+.modal-content h2 span {
+  color: var(--yellow);
+}
+
+.modal-content input {
+  width: 100%;
+  margin: 0.4rem 0;
+  padding: 0.7rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #333;
+  background: #111;
+  color: var(--text);
+}
+
+.modal-content button {
+  margin-top: 0.8rem;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  height: 60vh;
+  background-image: url("assets/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255, 201, 40, 0.18), transparent),
+              linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.85));
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+
+.hero-content p {
+  margin-top: 0.3rem;
+  color: var(--muted);
+}
+
+.hero-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.85rem;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.btn.primary {
+  background: var(--yellow);
+  color: #111;
+  box-shadow: var(--shadow);
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--yellow);
+  border: 1px solid var(--yellow);
+}
+
+.btn.small {
+  padding: 0.5rem 1.1rem;
+  font-size: 0.78rem;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Sections */
+.section {
+  padding: 3rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--yellow);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Combos */
+.combo-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.combo-card {
+  background: radial-gradient(circle at top left, #333 0, #111 60%);
+  border-radius: var(--radius);
+  padding: 1.3rem 1.2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.combo-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/paper-texture.png");
+  mix-blend-mode: soft-light;
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+.combo-card h3 {
+  color: var(--yellow);
+  margin-top: 0;
+  font-size: 1.05rem;
+}
+
+.combo-desc {
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+.combo-note {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.combo-price {
+  margin: 0.6rem 0;
+  color: var(--red);
+  font-weight: 700;
+}
+
+/* Menu columns */
+.menu-section {
+  background: #181818;
+  border-radius: 24px 24px 0 0;
+  box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.7);
+}
+
+.menu-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+}
+
+.menu-column h3 {
+  color: var(--yellow);
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.1);
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.menu-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-column li {
+  font-size: 0.85rem;
+  padding: 0.35rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu-column li span {
+  color: var(--muted);
+  padding-left: 0.5rem;
+}
+
+.menu-column li:hover {
+  color: var(--yellow);
+}
+
+/* Cart bar */
+.cart-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #181818ee;
+  backdrop-filter: blur(12px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  z-index: 50;
+}
+
+.cart-summary span {
+  color: var(--yellow);
+}
+
+/* Order section */
+.order-section {
+  background: #111;
+  margin-bottom: 4rem;
+}
+
+.order-section textarea {
+  width: 100%;
+  min-height: 90px;
+  border-radius: var(--radius);
+  padding: 0.8rem;
+  border: 1px solid #333;
+  background: #151515;
+  color: var(--text);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Footer */
+.footer {
+  background: #000;
+  padding: 2rem 1.5rem 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.footer h3 {
+  color: var(--yellow);
+}
+
+.lottie-box {
+  width: 180px;
+  height: 140px;
+}
+
+.upi-qr {
+  width: 160px;
+  border-radius: 12px;
+  margin-top: 0.5rem;
+}
+
+.social-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.7rem;
+}
+
+.social-lottie {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    height: 55vh;
+  }
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+}
