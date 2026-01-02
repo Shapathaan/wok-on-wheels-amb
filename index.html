@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wok on Wheels | Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Lottie -->
+  <script src="https://unpkg.com/lottie-web@5.12.2/build/player/lottie_light.min.js"></script>
+</head>
+<body>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <h2>Welcome to <span>Wok on Wheels</span></h2>
+      <p>Enter your details to continue (no OTP).</p>
+      <form id="loginForm">
+        <input type="text" id="custName" placeholder="Full Name" required />
+        <input type="tel" id="custPhone" placeholder="Mobile Number" required />
+        <button type="submit">Continue</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Wok on Wheels</h1>
+      <p>Indian-Chinese on the Move</p>
+      <div class="hero-buttons">
+        <a href="#combos" class="btn primary">View Combos</a>
+        <a href="#menu" class="btn secondary">Full Menu</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Combos -->
+  <section id="combos" class="section combos">
+    <h2>Combos</h2>
+    <div class="combo-grid">
+      <!-- Classic Chinese -->
+      <article class="combo-card">
+        <h3>The "Classic Chinese" Platter</h3>
+        <p class="combo-desc">
+          Veg fried rice (half), veg Manchurian gravy (half), 2 pcs veg momos (steam).
+        </p>
+        <p class="combo-note">Perfect pairing for rice + gravy + momos.</p>
+        <p class="combo-price">₹150 (est.)</p>
+        <button class="btn small add-combo"
+          data-name='The "Classic Chinese" Platter'
+          data-price="150">
+          Add to Order
+        </button>
+      </article>
+
+      <!-- Street Snack Trio -->
+      <article class="combo-card">
+        <h3>The "Street Snack" Trio</h3>
+        <p class="combo-desc">
+          Veg Schezwan frankie (cheese), plain fries, veg Manchow soup (half).
+        </p>
+        <p class="combo-note">Lighter option for quick bites.</p>
+        <p class="combo-price">₹180 (est.)</p>
+        <button class="btn small add-combo"
+          data-name='The "Street Snack" Trio'
+          data-price="180">
+          Add to Order
+        </button>
+      </article>
+
+      <!-- Noodle Lover's -->
+      <article class="combo-card">
+        <h3>The Noodle Lover's Combo</h3>
+        <p class="combo-desc">
+          Veg Hakka noodles (half), veg paneer chilli (half-dry), Chinese bhel (small).
+        </p>
+        <p class="combo-note">Balance of noodles, crunch and paneer chilli.</p>
+        <p class="combo-price">₹200 (est.)</p>
+        <button class="btn small add-combo"
+          data-name="The Noodle Lover's Combo"
+          data-price="200">
+          Add to Order
+        </button>
+      </article>
+
+      <!-- Spicy Schezwan Box -->
+      <article class="combo-card">
+        <h3>The "Spicy Schezwan" Box</h3>
+        <p class="combo-desc">
+          Veg Schezwan rice (half), veg Schezwan noodles (half), veg Manchurian gravy,
+          Kurkure momos (4 pcs), chilly potato / crispy soft rice.
+        </p>
+        <p class="combo-note">For those who like it hot.</p>
+        <p class="combo-price">₹220 (est.)</p>
+        <button class="btn small add-combo"
+          data-name='The "Spicy Schezwan" Box'
+          data-price="220">
+          Add to Order
+        </button>
+      </article>
+
+      <!-- Triple Treat Feast -->
+      <article class="combo-card">
+        <h3>The "Triple Treat" Feast</h3>
+        <p class="combo-desc">
+          Veg fried rice (half), veg Hakka noodles (half), veg Manchurian gravy (half),
+          Kurkure momos (4 pcs).
+        </p>
+        <p class="combo-note">Heavier combo for big appetite.</p>
+        <p class="combo-price">₹260 (est.)</p>
+        <button class="btn small add-combo"
+          data-name='The "Triple Treat" Feast'
+          data-price="260">
+          Add to Order
+        </button>
+      </article>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section id="menu" class="section menu-section">
+    <h2>Menu</h2>
+    <div class="menu-columns">
+      <!-- RICE -->
+      <div class="menu-column">
+        <h3>Rice</h3>
+        <ul>
+          <li data-name="Veg Fried Rice" data-price="89">Veg Fried Rice <span>₹89 / 129</span></li>
+          <li data-name="Veg Schezwan Rice" data-price="89">Veg Schezwan Rice <span>₹89 / 129</span></li>
+          <li data-name="Veg Combination Rice" data-price="99">Veg Combination Rice <span>₹99 / 149</span></li>
+          <li data-name="Veg Garlic Rice" data-price="99">Veg Garlic Rice <span>₹99 / 149</span></li>
+          <li data-name="Veg Triple Rice" data-price="119">Veg Triple Rice <span>₹119 / 169</span></li>
+          <!-- ...baaki items tu same pattern se add kar sakta hai -->
+        </ul>
+      </div>
+
+      <!-- NOODLES -->
+      <div class="menu-column">
+        <h3>Noodles</h3>
+        <ul>
+          <li data-name="Veg Noodles" data-price="89">Veg Noodles <span>₹89 / 129</span></li>
+          <li data-name="Veg Schezwan Noodles" data-price="89">Veg Schezwan Noodles <span>₹89 / 129</span></li>
+          <li data-name="Veg Garlic Noodles" data-price="99">Veg Garlic Noodles <span>₹99 / 149</span></li>
+          <li data-name="Veg Triple Noodles" data-price="119">Veg Triple Noodles <span>₹119 / 169</span></li>
+        </ul>
+      </div>
+
+      <!-- MOMOS -->
+      <div class="menu-column">
+        <h3>Momos</h3>
+        <ul>
+          <li data-name="Veg Momos Fry" data-price="89">Veg Momos - Fry <span>₹89 / 129</span></li>
+          <li data-name="Veg Momos Steam" data-price="89">Veg Momos - Steam <span>₹89 / 129</span></li>
+          <!-- ... -->
+        </ul>
+      </div>
+
+      <!-- FRANKIE -->
+      <div class="menu-column">
+        <h3>Frankie</h3>
+        <ul>
+          <li data-name="Veg Frankie" data-price="49">Veg Frankie <span>₹49</span></li>
+          <li data-name="Veg Schezwan Frankie (Cheese)" data-price="64">Veg Schezwan Frankie (Cheese) <span>₹64 / 64</span></li>
+          <!-- ... -->
+        </ul>
+      </div>
+
+      <!-- VEG STARTERS, SOUPS, STARTERS columns bhi same tarah se add kar -->
+    </div>
+  </section>
+
+  <!-- Cart / Order Bar -->
+  <div id="cartBar" class="cart-bar">
+    <div class="cart-summary">
+      <span id="cartCount">0</span> items | Total: ₹<span id="cartTotal">0</span>
+    </div>
+    <button id="checkoutBtn" class="btn primary">Place Order</button>
+  </div>
+
+  <!-- Order Form -->
+  <section id="orderSection" class="section order-section hidden">
+    <h2>Confirm Order</h2>
+    <form id="orderForm">
+      <textarea id="orderNotes" placeholder="Any notes (extra spicy, no onion, etc.)"></textarea>
+      <button type="submit" class="btn primary">Confirm &amp; Pay at Counter</button>
+    </form>
+  </section>
+
+  <!-- Footer with QR & Social -->
+  <footer class="footer">
+    <div class="footer-left">
+      <h3>Scan &amp; Pay (UPI / GPay)</h3>
+      <div id="upiLottie" class="lottie-box"></div>
+      <img src="assets/upi-qr.png" alt="UPI QR" class="upi-qr" />
+    </div>
+    <div class="footer-right">
+      <h3>Follow &amp; Chat</h3>
+      <div class="social-row">
+        <div id="instaLottie" class="social-lottie" data-url="https://instagram.com/YOUR_HANDLE"></div>
+        <div id="waLottie" class="social-lottie" data-url="https://wa.me/91XXXXXXXXXX"></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Firebase + App JS -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
